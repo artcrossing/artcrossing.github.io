@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Crossing</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: #0a0a0a;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .crossing-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        .horizontal-line {
+            position: absolute;
+            width: 100vw;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #333 20%, #666 50%, #333 80%, transparent 100%);
+        }
+
+        .vertical-line {
+            position: absolute;
+            width: 1px;
+            height: 100vh;
+            background: linear-gradient(0deg, transparent 0%, #333 20%, #666 50%, #333 80%, transparent 100%);
+        }
+
+        .h-line-1 { top: 20vh; animation: pulse-h 4s ease-in-out infinite; }
+        .h-line-2 { top: 40vh; animation: pulse-h 4s ease-in-out infinite 1s; }
+        .h-line-3 { top: 60vh; animation: pulse-h 4s ease-in-out infinite 2s; }
+        .h-line-4 { top: 80vh; animation: pulse-h 4s ease-in-out infinite 3s; }
+
+        .v-line-1 { left: 15vw; animation: pulse-v 5s ease-in-out infinite; }
+        .v-line-2 { left: 35vw; animation: pulse-v 5s ease-in-out infinite 1.5s; }
+        .v-line-3 { left: 55vw; animation: pulse-v 5s ease-in-out infinite 3s; }
+        .v-line-4 { left: 75vw; animation: pulse-v 5s ease-in-out infinite 4.5s; }
+
+        .diagonal-1 {
+            position: absolute;
+            width: 150%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #444 30%, #777 50%, #444 70%, transparent 100%);
+            top: 50%;
+            left: -25%;
+            transform: rotate(30deg);
+            animation: diagonal-pulse 6s ease-in-out infinite;
+        }
+
+        .diagonal-2 {
+            position: absolute;
+            width: 150%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #444 30%, #777 50%, #444 70%, transparent 100%);
+            top: 50%;
+            left: -25%;
+            transform: rotate(-30deg);
+            animation: diagonal-pulse 6s ease-in-out infinite 3s;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 8rem);
+            font-weight: 100;
+            color: #ffffff;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 0 0 20px rgba(255,255,255,0.1);
+        }
+
+        h1::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            width: 80px;
+            height: 1px;
+            background: #666;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -100px;
+            width: 80px;
+            height: 1px;
+            background: #666;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 200;
+            letter-spacing: 0.3em;
+            margin-bottom: 4rem;
+            text-transform: lowercase;
+        }
+
+        .status {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: #555;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .status::before {
+            content: '//';
+            color: #333;
+            margin-right: 0.5rem;
+        }
+
+        .blinking-cursor {
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes pulse-h {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes pulse-v {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes diagonal-pulse {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            h1::before, h1::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="crossing-grid">
+        <div class="horizontal-line h-line-1"></div>
+        <div class="horizontal-line h-line-2"></div>
+        <div class="horizontal-line h-line-3"></div>
+        <div class="horizontal-line h-line-4"></div>
+        
+        <div class="vertical-line v-line-1"></div>
+        <div class="vertical-line v-line-2"></div>
+        <div class="vertical-line v-line-3"></div>
+        <div class="vertical-line v-line-4"></div>
+        
+        <div class="diagonal-1"></div>
+        <div class="diagonal-2"></div>
+    </div>
+
+    <div class="container">
+        <h1>Art Crossing</h1>
+        <p class="subtitle">digital intersection</p>
+    </div>
+
+    <div class="status">
+        system initializing<span class="blinking-cursor">_</span>
+        <br>
+        site under development
+    </div>
+</body>
+</html>
