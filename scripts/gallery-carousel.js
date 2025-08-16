@@ -156,17 +156,18 @@ class GalleryCarousel {
         this.setupIntersectionObserver();
     }
 
-    getSlideTransform(index) {
-        const diff = index - this.currentSlide;
+    getSlideTransform(visibleIndex) {
+        const diff = visibleIndex - this.currentSlide;
+        const visibleSlides = this.getVisibleSlides();
         let transform = '';
         
         if (diff === 0) {
             // Active slide
             transform = 'translateX(0) translateZ(0) rotateY(0deg) scale(1)';
-        } else if (diff === -1 || (diff === this.totalSlides - 1 && this.currentSlide === 0)) {
+        } else if (diff === -1 || (diff === visibleSlides.length - 1 && this.currentSlide === 0)) {
             // Previous slide
             transform = 'translateX(-120%) translateZ(-200px) rotateY(25deg) scale(0.8)';
-        } else if (diff === 1 || (diff === -(this.totalSlides - 1) && this.currentSlide === this.totalSlides - 1)) {
+        } else if (diff === 1 || (diff === -(visibleSlides.length - 1) && this.currentSlide === visibleSlides.length - 1)) {
             // Next slide
             transform = 'translateX(120%) translateZ(-200px) rotateY(-25deg) scale(0.8)';
         } else {
@@ -179,38 +180,51 @@ class GalleryCarousel {
 
     updateCarousel() {
         console.log('updateCarousel called, current slide:', this.currentSlide);
-        console.log('Total slides:', this.totalSlides);
         
-        this.slides.forEach((slide, index) => {
-            const diff = index - this.currentSlide;
-            
-            console.log(`Slide ${index}: diff=${diff}`);
-            
+        const visibleSlides = this.getVisibleSlides();
+        console.log('Visible slides:', visibleSlides.length);
+        
+        // Update all slides, but only position visible ones
+        this.slides.forEach((slide, allIndex) => {
             // Remove all position classes
             slide.classList.remove('active', 'prev', 'next', 'far');
+            
+            // Check if this slide is visible
+            const isVisible = visibleSlides.includes(slide);
+            if (!isVisible) {
+                slide.style.opacity = '0';
+                slide.style.zIndex = '0';
+                return;
+            }
+            
+            // Find the visible index of this slide
+            const visibleIndex = visibleSlides.indexOf(slide);
+            const diff = visibleIndex - this.currentSlide;
+            
+            console.log(`Slide ${allIndex} (visible ${visibleIndex}): diff=${diff}`);
             
             // Add appropriate class and transform
             if (diff === 0) {
                 slide.classList.add('active');
-                console.log(`Slide ${index} set to ACTIVE`);
-            } else if (diff === -1 || (diff === this.totalSlides - 1 && this.currentSlide === 0)) {
+                console.log(`Slide ${allIndex} set to ACTIVE`);
+            } else if (diff === -1 || (diff === visibleSlides.length - 1 && this.currentSlide === 0)) {
                 slide.classList.add('prev');
-                console.log(`Slide ${index} set to PREV`);
-            } else if (diff === 1 || (diff === -(this.totalSlides - 1) && this.currentSlide === this.totalSlides - 1)) {
+                console.log(`Slide ${allIndex} set to PREV`);
+            } else if (diff === 1 || (diff === -(visibleSlides.length - 1) && this.currentSlide === visibleSlides.length - 1)) {
                 slide.classList.add('next');
-                console.log(`Slide ${index} set to NEXT`);
+                console.log(`Slide ${allIndex} set to NEXT`);
             } else {
                 slide.classList.add('far');
-                console.log(`Slide ${index} set to FAR`);
+                console.log(`Slide ${allIndex} set to FAR`);
             }
             
             // Apply smooth transform
-            const transform = this.getSlideTransform(index);
+            const transform = this.getSlideTransform(visibleIndex);
             slide.style.transform = transform;
             slide.style.opacity = diff === 0 ? '1' : (Math.abs(diff) === 1 ? '0.7' : '0.3');
             slide.style.zIndex = diff === 0 ? '10' : (Math.abs(diff) === 1 ? '5' : '1');
             
-            console.log(`Slide ${index} transform:`, transform);
+            console.log(`Slide ${allIndex} transform:`, transform);
         });
         
         this.updateIndicators();
@@ -507,6 +521,13 @@ class GalleryCarousel {
 
     getTotalSlides() {
         return this.totalSlides;
+    }
+
+    getVisibleSlides() {
+        return this.slides.filter(slide => {
+            const style = window.getComputedStyle(slide);
+            return style.display !== 'none';
+        });
     }
 }
 
