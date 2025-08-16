@@ -12,7 +12,6 @@ class GalleryCarousel {
         this.autoplayInterval = null;
         this.touchStartX = 0;
         this.touchEndX = 0;
-        this.activeChapter = 'all';
         
         this.init();
     }
@@ -228,7 +227,9 @@ class GalleryCarousel {
             console.log('Already at this slide, returning');
             return;
         }
-        if (index < 0 || index >= this.totalSlides) {
+        
+        const visibleSlides = this.getVisibleSlides();
+        if (index < 0 || index >= visibleSlides.length) {
             console.log('Invalid slide index:', index);
             return;
         }
@@ -236,6 +237,7 @@ class GalleryCarousel {
         console.log('Setting isAnimating to true and updating currentSlide');
         this.isAnimating = true;
         this.currentSlide = index;
+        this.totalSlides = visibleSlides.length; // Update total slides count
         
         console.log('Calling updateCarousel');
         this.updateCarousel();
@@ -248,29 +250,31 @@ class GalleryCarousel {
     }
 
     nextSlide() {
-        console.log('Next slide called, current:', this.currentSlide, 'total:', this.totalSlides);
+        const visibleSlides = this.getVisibleSlides();
+        console.log('Next slide called, current:', this.currentSlide, 'visible total:', visibleSlides.length);
         console.log('Is animating?', this.isAnimating);
-        if (this.totalSlides <= 1) return;
+        if (visibleSlides.length <= 1) return;
         if (this.isAnimating) {
             console.log('Animation in progress, skipping');
             return;
         }
         
-        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+        const nextIndex = (this.currentSlide + 1) % visibleSlides.length;
         console.log('Going to slide:', nextIndex);
         this.goToSlide(nextIndex);
     }
 
     previousSlide() {
-        console.log('Previous slide called, current:', this.currentSlide, 'total:', this.totalSlides);
+        const visibleSlides = this.getVisibleSlides();
+        console.log('Previous slide called, current:', this.currentSlide, 'visible total:', visibleSlides.length);
         console.log('Is animating?', this.isAnimating);
-        if (this.totalSlides <= 1) return;
+        if (visibleSlides.length <= 1) return;
         if (this.isAnimating) {
             console.log('Animation in progress, skipping');
             return;
         }
         
-        const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        const prevIndex = (this.currentSlide - 1 + visibleSlides.length) % visibleSlides.length;
         console.log('Going to slide:', prevIndex);
         this.goToSlide(prevIndex);
     }
@@ -292,8 +296,9 @@ class GalleryCarousel {
         if (!this.indicators) return;
         
         this.indicators.innerHTML = '';
+        const visibleSlides = this.getVisibleSlides();
         
-        for (let i = 0; i < this.totalSlides; i++) {
+        for (let i = 0; i < visibleSlides.length; i++) {
             const indicator = document.createElement('div');
             indicator.classList.add('indicator');
             indicator.addEventListener('click', () => this.goToSlide(i));
@@ -314,45 +319,36 @@ class GalleryCarousel {
         console.log('Filtering by chapter:', chapter);
         this.activeChapter = chapter;
         
+        // Reset animation state
+        this.isAnimating = false;
+        
         if (chapter === 'all') {
             this.slides.forEach(slide => {
                 slide.style.display = 'flex';
                 slide.style.position = 'absolute';
             });
-            this.totalSlides = this.slides.length;
         } else {
-            let visibleCount = 0;
             this.slides.forEach(slide => {
                 const slideChapter = slide.dataset.chapter;
                 if (slideChapter === chapter) {
                     slide.style.display = 'flex';
                     slide.style.position = 'absolute';
-                    visibleCount++;
                 } else {
                     slide.style.display = 'none';
                 }
             });
-            this.totalSlides = visibleCount;
         }
+        
+        // Update slide count and reset to first slide
+        const visibleSlides = this.getVisibleSlides();
+        this.totalSlides = visibleSlides.length;
+        this.currentSlide = 0;
         
         console.log('Total visible slides after filter:', this.totalSlides);
         
-        // Update filtered slides array and reset carousel
-        this.updateFilteredSlides();
-        this.currentSlide = 0;
-        this.updateCarousel();
-    }
-
-    updateFilteredSlides() {
-        if (this.activeChapter === 'all') {
-            this.totalSlides = this.slides.length;
-        } else {
-            this.totalSlides = this.slides.filter(slide => 
-                slide.dataset.chapter === this.activeChapter
-            ).length;
-        }
-        
+        // Update indicators and carousel
         this.createIndicators();
+        this.updateCarousel();
     }
 
     updateTabButtons(activeBtn) {
