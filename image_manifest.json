@@ -1,0 +1,340 @@
+{
+  "artists": {
+    "presentations": [
+      {
+        "filename": "image22.jpeg",
+        "path": "presentations/image22.jpeg",
+        "size": 88596
+      },
+      {
+        "filename": "image8.png",
+        "path": "presentations/image8.png",
+        "size": 1549106
+      },
+      {
+        "filename": "image9.png",
+        "path": "presentations/image9.png",
+        "size": 3146846
+      },
+      {
+        "filename": "image19.jpeg",
+        "path": "presentations/image19.jpeg",
+        "size": 81328
+      },
+      {
+        "filename": "image35.jpeg",
+        "path": "presentations/image35.jpeg",
+        "size": 375708
+      },
+      {
+        "filename": "image14.png",
+        "path": "presentations/image14.png",
+        "size": 2821648
+      },
+      {
+        "filename": "image28.png",
+        "path": "presentations/image28.png",
+        "size": 5686764
+      },
+      {
+        "filename": "image29.jpg",
+        "path": "presentations/image29.jpg",
+        "size": 382830
+      },
+      {
+        "filename": "image15.png",
+        "path": "presentations/image15.png",
+        "size": 619234
+      },
+      {
+        "filename": "image17.png",
+        "path": "presentations/image17.png",
+        "size": 1637412
+      },
+      {
+        "filename": "image16.png",
+        "path": "presentations/image16.png",
+        "size": 1797121
+      },
+      {
+        "filename": "image12.JPG",
+        "path": "presentations/image12.JPG",
+        "size": 65395
+      },
+      {
+        "filename": "image13.JPG",
+        "path": "presentations/image13.JPG",
+        "size": 669504
+      },
+      {
+        "filename": "image39.png",
+        "path": "presentations/image39.png",
+        "size": 368440
+      },
+      {
+        "filename": "image11.jpg",
+        "path": "presentations/image11.jpg",
+        "size": 102434
+      },
+      {
+        "filename": "image10.JPG",
+        "path": "presentations/image10.JPG",
+        "size": 2553267
+      },
+      {
+        "filename": "image38.png",
+        "path": "presentations/image38.png",
+        "size": 674997
+      },
+      {
+        "filename": "image34.PNG",
+        "path": "presentations/image34.PNG",
+        "size": 2135701
+      },
+      {
+        "filename": "image36.jpg",
+        "path": "presentations/image36.jpg",
+        "size": 767624
+      },
+      {
+        "filename": "image23.jpg",
+        "path": "presentations/image23.jpg",
+        "size": 437366
+      },
+      {
+        "filename": "image27.png",
+        "path": "presentations/image27.png",
+        "size": 3536186
+      },
+      {
+        "filename": "image33.JPG",
+        "path": "presentations/image33.JPG",
+        "size": 6255749
+      },
+      {
+        "filename": "image32.JPG",
+        "path": "presentations/image32.JPG",
+        "size": 40584
+      },
+      {
+        "filename": "image26.png",
+        "path": "presentations/image26.png",
+        "size": 2832163
+      },
+      {
+        "filename": "image18.png",
+        "path": "presentations/image18.png",
+        "size": 1732473
+      },
+      {
+        "filename": "image30.png",
+        "path": "presentations/image30.png",
+        "size": 843195
+      },
+      {
+        "filename": "image24.PNG",
+        "path": "presentations/image24.PNG",
+        "size": 41847281
+      },
+      {
+        "filename": "image25.png",
+        "path": "presentations/image25.png",
+        "size": 2853288
+      },
+      {
+        "filename": "image31.png",
+        "path": "presentations/image31.png",
+        "size": 938496
+      },
+      {
+        "filename": "image7.png",
+        "path": "presentations/image7.png",
+        "size": 963573
+      },
+      {
+        "filename": "image20.jpeg",
+        "path": "presentations/image20.jpeg",
+        "size": 38672
+      },
+      {
+        "filename": "image6.png",
+        "path": "presentations/image6.png",
+        "size": 3698905
+      },
+      {
+        "filename": "image4.jpg",
+        "path": "presentations/image4.jpg",
+        "size": 82440
+      },
+      {
+        "filename": "image5.JPG",
+        "path": "presentations/image5.JPG",
+        "size": 347882
+      },
+      {
+        "filename": "image1.jpg",
+        "path": "presentations/image1.jpg",
+        "size": 617913
+      },
+      {
+        "filename": "image2.jpg",
+        "path": "presentations/image2.jpg",
+        "size": 131636
+      },
+      {
+        "filename": "image37.jpeg",
+        "path": "presentations/image37.jpeg",
+        "size": 170385
+      },
+      {
+        "filename": "image21.jpeg",
+        "path": "presentations/image21.jpeg",
+        "size": 74461
+      },
+      {
+        "filename": "image3.png",
+        "path": "presentations/image3.png",
+        "size": 1987297
+      }
+    ],
+    "documents": [
+      {
+        "filename": "image8.png",
+        "path": "documents/image8.png",
+        "size": 169834
+      },
+      {
+        "filename": "image9.png",
+        "path": "documents/image9.png",
+        "size": 268229
+      },
+      {
+        "filename": "image14.png",
+        "path": "documents/image14.png",
+        "size": 181941
+      },
+      {
+        "filename": "image15.png",
+        "path": "documents/image15.png",
+        "size": 230457
+      },
+      {
+        "filename": "image17.png",
+        "path": "documents/image17.png",
+        "size": 2832163
+      },
+      {
+        "filename": "image16.png",
+        "path": "documents/image16.png",
+        "size": 2853288
+      },
+      {
+        "filename": "image6.jpeg",
+        "path": "documents/image6.jpeg",
+        "size": 81328
+      },
+      {
+        "filename": "image12.png",
+        "path": "documents/image12.png",
+        "size": 254642
+      },
+      {
+        "filename": "image13.JPG",
+        "path": "documents/image13.JPG",
+        "size": 347882
+      },
+      {
+        "filename": "image25.jpeg",
+        "path": "documents/image25.jpeg",
+        "size": 49563
+      },
+      {
+        "filename": "image11.png",
+        "path": "documents/image11.png",
+        "size": 2821648
+      },
+      {
+        "filename": "image10.png",
+        "path": "documents/image10.png",
+        "size": 1637412
+      },
+      {
+        "filename": "image21.jpg",
+        "path": "documents/image21.jpg",
+        "size": 767624
+      },
+      {
+        "filename": "image20.jpg",
+        "path": "documents/image20.jpg",
+        "size": 102434
+      },
+      {
+        "filename": "image4.jpeg",
+        "path": "documents/image4.jpeg",
+        "size": 88596
+      },
+      {
+        "filename": "image22.png",
+        "path": "documents/image22.png",
+        "size": 843195
+      },
+      {
+        "filename": "image23.png",
+        "path": "documents/image23.png",
+        "size": 938496
+      },
+      {
+        "filename": "image27.png",
+        "path": "documents/image27.png",
+        "size": 2160971
+      },
+      {
+        "filename": "image26.JPG",
+        "path": "documents/image26.JPG",
+        "size": 1147118
+      },
+      {
+        "filename": "image5.jpeg",
+        "path": "documents/image5.jpeg",
+        "size": 38672
+      },
+      {
+        "filename": "image18.png",
+        "path": "documents/image18.png",
+        "size": 3536186
+      },
+      {
+        "filename": "image24.JPG",
+        "path": "documents/image24.JPG",
+        "size": 40584
+      },
+      {
+        "filename": "image19.png",
+        "path": "documents/image19.png",
+        "size": 5686764
+      },
+      {
+        "filename": "image7.png",
+        "path": "documents/image7.png",
+        "size": 337143
+      },
+      {
+        "filename": "image1.PNG",
+        "path": "documents/image1.PNG",
+        "size": 2135701
+      },
+      {
+        "filename": "image2.png",
+        "path": "documents/image2.png",
+        "size": 1987297
+      },
+      {
+        "filename": "image3.jpeg",
+        "path": "documents/image3.jpeg",
+        "size": 74461
+      }
+    ]
+  },
+  "workshop_images": [],
+  "general_images": []
+}

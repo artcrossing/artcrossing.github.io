@@ -1,0 +1,370 @@
+{
+  "chapter1": {
+    "title": "The Replicated Self",
+    "description": "Selfhood is not self-made, but shaped in subtle repetitions, negotiated glances, and quiet adjustments to what is expected.",
+    "artists": [
+      {
+        "key": "chris_bowes",
+        "name": "Chris Bowes",
+        "bio": "Artist information from Chris Bowes",
+        "specialty": "Digital Interactive Art",
+        "artworks": [
+          {
+            "title": "Mirror",
+            "image": "images/chris_bowes/mirror.jpg",
+            "medium": "Digital Interactive Art",
+            "dimensions": "",
+            "year": "2017",
+            "price": "PoA",
+            "description": "An interactive artwork that employs a random dithering algorithm to compress and reproduce the form of the spectator standing before the screen."
+          }
+        ]
+      },
+      {
+        "key": "jun_wu",
+        "name": "Jun Wu",
+        "bio": "Artist information from Jun Wu",
+        "specialty": "Screen printing",
+        "artworks": [
+          {
+            "title": "The Joy of Fish",
+            "image": "images/jun_wu/the_joy_of_fish.jpg",
+            "medium": "Screen printing",
+            "dimensions": "120 cm × 78 cm",
+            "year": "2023",
+            "price": "$1820",
+            "description": "Explores everyday sensory experiences through screen printing techniques, questioning the repetitiveness embedded in routine."
+          },
+          {
+            "title": "N Series",
+            "image": "images/jun_wu/n_series.jpg",
+            "medium": "Screen printing",
+            "dimensions": "58 cm × 70 cm",
+            "year": "2023",
+            "price": "$1495",
+            "description": "Part of a series exploring repetitive patterns and daily life rhythms."
+          }
+        ]
+      },
+      {
+        "key": "haojun_yang",
+        "name": "Haojun Yang",
+        "bio": "Artist information from Haojun Yang",
+        "specialty": "Oil on canvas",
+        "artworks": [
+          {
+            "title": "Wild Grass",
+            "image": "images/haojun_yang/wild_grass.jpg",
+            "medium": "Oil on canvas",
+            "dimensions": "15 cm × 15 cm",
+            "year": "2021",
+            "price": "",
+            "description": "Captures the spirituality and timelessness found in nature's subtle details."
+          },
+          {
+            "title": "Predicament",
+            "image": "images/haojun_yang/predicament.jpg",
+            "medium": "Oil on wood panel",
+            "dimensions": "10 cm × 10 cm",
+            "year": "2024",
+            "price": "",
+            "description": "Explores the relationship between natural decay and spiritual renewal."
+          },
+          {
+            "title": "Predicament II",
+            "image": "images/haojun_yang/predicament_ii.jpg",
+            "medium": "Oil on wood panel",
+            "dimensions": "10 cm × 10 cm",
+            "year": "2024",
+            "price": "",
+            "description": "Continuation of the Predicament series exploring life's spiritual dimensions."
+          }
+        ]
+      },
+      {
+        "key": "sharleen_cu",
+        "name": "Sharleen Cu",
+        "bio": "Artist information from Sharleen Cu",
+        "specialty": "Acrylic, color pencil, wood and wire",
+        "artworks": [
+          {
+            "title": "In Good Company",
+            "image": "images/sharleen_cu/in_good_company.jpg",
+            "medium": "Acrylic, color pencil, wood and wire",
+            "dimensions": "",
+            "year": "2025",
+            "price": "",
+            "description": "Explores the complicated mess of identity as a Chinese-Filipino living in Australia through mixed media self-portraiture."
+          }
+        ]
+      }
+    ]
+  },
+  "chapter2": {
+    "title": "The Rewilded Senses",
+    "description": "Even in the default disciplinary reality, feelings still find their way to nurturing the part of us that continues to listen beneath it all.",
+    "artists": [
+      {
+        "key": "jiahong_lang",
+        "name": "Jiahong Lang",
+        "bio": "Artist information from Jiahong Lang",
+        "specialty": "Metal, acrylic",
+        "artworks": [
+          {
+            "title": "Null's Lamp",
+            "image": "images/jiahong_lang/nulls_lamp.jpg",
+            "medium": "Metal, acrylic",
+            "dimensions": "45 × 15 × 15 cm",
+            "year": "2025",
+            "price": "",
+            "description": "Through the skillful use of reflective color, this work creates a rich spatial atmosphere and guides human behavior and visual flow."
+          },
+          {
+            "title": "Bohemian Rhapsody",
+            "image": "images/jiahong_lang/bohemian_rhapsody.jpg",
+            "medium": "Color, Video, Digital Art",
+            "dimensions": "",
+            "year": "2025",
+            "price": "",
+            "description": "An experimental video composed of dot matrix colors containing hidden 3D imagery using autostereogram technique."
+          }
+        ]
+      },
+      {
+        "key": "heng_wang",
+        "name": "Heng Wang",
+        "bio": "Artist information from Heng Wang",
+        "specialty": "Velvet photographic paper (giclée print)",
+        "artworks": [
+          {
+            "title": "Myriad of Dust",
+            "image": "images/heng_wang/myriad_of_dust.jpg",
+            "medium": "Velvet photographic paper (giclée print)",
+            "dimensions": "80 cm × 60 cm",
+            "year": "2025",
+            "price": "",
+            "description": "The microscopic structure of a butterfly's wings revealed in entirely different forms under microscopic lens."
+          }
+        ]
+      },
+      {
+        "key": "frank_meuschke",
+        "name": "Frank James Meuschke",
+        "bio": "Artist information from Frank James Meuschke",
+        "specialty": "Sublimation print on polyethylene fabric",
+        "artworks": [
+          {
+            "title": "Touch The Sky",
+            "image": "images/frank_meuschke/touch_the_sky.jpg",
+            "medium": "Sublimation print on polyethylene fabric",
+            "dimensions": "129 × 172 cm",
+            "year": "2022",
+            "price": "",
+            "description": "Expression of melancholy, memory, nature, and place using petroleum-based plastic filters."
+          },
+          {
+            "title": "Whitewater River",
+            "image": "images/frank_meuschke/whitewater_river.jpg",
+            "medium": "Sublimation print on polyethylene fabric",
+            "dimensions": "129 × 172cm",
+            "year": "2022",
+            "price": "",
+            "description": "Part of the artist's exploration of ecologically significant sites at perceptual thresholds."
+          },
+          {
+            "title": "Fishing, Smith Point, New York",
+            "image": "images/frank_meuschke/fishing_smith_point_new_york.jpg",
+            "medium": "Pigment Print on Hahnemuhle Photo Rag",
+            "dimensions": "57 × 76 cm",
+            "year": "2024",
+            "price": "",
+            "description": "Engages dialogue between nature, national identity, place and personal experience."
+          },
+          {
+            "title": "Mountain House, Aspen, Colorado",
+            "image": "images/frank_meuschke/mountain_house_aspen_colorado.jpg",
+            "medium": "Pigment Print on Hahnemuhle Photo Rag",
+            "dimensions": "57 × 76 cm",
+            "year": "2024",
+            "price": "",
+            "description": "Part of the \"Aesthetics of Melancholy\" series exploring nature and personal experience."
+          }
+        ]
+      },
+      {
+        "key": "vivian_qiu",
+        "name": "Vivian Qiu",
+        "bio": "Artist information from Vivian Qiu",
+        "specialty": "Rice, embroidery thread, coffee grounds, grass, herbs, tea, grains, hemp yarns",
+        "artworks": [
+          {
+            "title": "We've Come A Long Way",
+            "image": "images/vivian_qiu/weve_come_a_long_way.jpg",
+            "medium": "Rice, embroidery thread, coffee grounds, grass, herbs, tea, grains, hemp yarns",
+            "dimensions": "Various sizes, 6 x 4 x 4 cm per object",
+            "year": "2025",
+            "price": "",
+            "description": "Recreates ancient Chinese clay pots using rice and natural fibers, reconnecting with history and Chinese heritage."
+          },
+          {
+            "title": "Use What You've Got",
+            "image": "images/vivian_qiu/use_what_youve_got.jpg",
+            "medium": "Rice, coffee grounds, grass, tea, sand, metal",
+            "dimensions": "15 x 12 x 5cm",
+            "year": "2025",
+            "price": "",
+            "description": "Inspired by repurposed ceramic pot walls, exploring resourcefulness and cultural heritage."
+          }
+        ]
+      },
+      {
+        "key": "qianxun_li",
+        "name": "Qianxun Li",
+        "bio": "Artist information from Qianxun Li",
+        "specialty": "Deconstructed umbrella frame, nylon filament, glass, UV-cured",
+        "artworks": [
+          {
+            "title": "Rain: The Apparent Threshold",
+            "image": "images/qianxun_li/rain_the_apparent_threshold.jpg",
+            "medium": "Deconstructed umbrella frame, nylon filament, glass, UV-cured",
+            "dimensions": "105x90cm",
+            "year": "2025",
+            "price": "",
+            "description": "Reimagines the umbrella as a skeletal structure, exploring boundaries between shelter and exposure."
+          },
+          {
+            "title": "Raindrop",
+            "image": "images/qianxun_li/raindrop.jpg",
+            "medium": "Aluminum, UV Resin, Vegetable Oil, Steel Wire, Transparent Thread",
+            "dimensions": "8 × 8 × 3.5 cm",
+            "year": "2024",
+            "price": "",
+            "description": "Captures the instant of rain hitting metal, with droplets suspended on transparent threads."
+          },
+          {
+            "title": "After the Rain",
+            "image": "images/qianxun_li/after_the_rain.jpg",
+            "medium": "Aluminum, UV resin, vegetable oil, steel wire",
+            "dimensions": "8 × 8 × 3.5 cm",
+            "year": "2024",
+            "price": "",
+            "description": "Captures the quiet aftermath of rainfall, when droplets remain on metal surfaces."
+          },
+          {
+            "title": "World",
+            "image": "images/qianxun_li/world.jpg",
+            "medium": "Aluminum, wood, UV glue, vegetable oil, plastic, handmade paper",
+            "dimensions": "7 × 6 × 6 cm",
+            "year": "2024",
+            "price": "",
+            "description": "Incorporates elements of light, shadow, and trees with movable leaves and embedded leaf fragments."
+          },
+          {
+            "title": "Water Between Fingers",
+            "image": "images/qianxun_li/water_between_fingers.jpg",
+            "medium": "UV glue, vegetable oil, plastic",
+            "dimensions": "3 × 4 × 5 cm",
+            "year": "2024",
+            "price": "",
+            "description": "Captures the sensation of water droplets slipping between fingers, symbolizing the flow of life."
+          }
+        ]
+      },
+      {
+        "key": "yilin_zhang",
+        "name": "Yilin Zhang",
+        "bio": "Artist information from Yilin Zhang",
+        "specialty": "Acrylic on canvas",
+        "artworks": [
+          {
+            "title": "Falling to Me",
+            "image": "images/yilin_zhang/falling_to_me.jpg",
+            "medium": "Acrylic on canvas",
+            "dimensions": "40 x 50 cm",
+            "year": "2025",
+            "price": "$2200",
+            "description": "Explores themes of mysticism, trauma, and healing through cross-cultural experiences and intuitive artistic practice."
+          },
+          {
+            "title": "Firework Candy",
+            "image": "images/yilin_zhang/firework_candy.jpg",
+            "medium": "Pastel on wood panel",
+            "dimensions": "30 x 40 cm",
+            "year": "2025",
+            "price": "",
+            "description": "Part of the artist's exploration of mysticism and healing through color and form."
+          },
+          {
+            "title": "Angel's Whisper",
+            "image": "images/yilin_zhang/angels_whisper.jpg",
+            "medium": "Pastel on wood panel",
+            "dimensions": "30 x 40 cm",
+            "year": "2025",
+            "price": "",
+            "description": "Explores spiritual themes and the artist's intuitive approach to healing through art."
+          }
+        ]
+      },
+      {
+        "key": "bei_han",
+        "name": "Bei Han",
+        "bio": "Artist information from Bei Han",
+        "specialty": "Paper mounted on wood panel, natural mineral pigments, synthetic pigments, gold leaf",
+        "artworks": [
+          {
+            "title": "Echo",
+            "image": "images/bei_han/echo.jpg",
+            "medium": "Paper mounted on wood panel, natural mineral pigments, synthetic pigments, gold leaf",
+            "dimensions": "41 x 31.8cm",
+            "year": "2025",
+            "price": "$1400",
+            "description": "Connects natural symbols with the act of creation, evoking the viewer's sensory experience of the ocean's sound."
+          }
+        ]
+      },
+      {
+        "key": "shiyin_li",
+        "name": "Shiyin Li",
+        "bio": "Artist information from Shiyin Li",
+        "specialty": "Digital tablet drawing + archival pigment print",
+        "artworks": [
+          {
+            "title": "Bird of Paradise",
+            "image": "images/shiyin_li/bird_of_paradise.jpg",
+            "medium": "Digital tablet drawing + archival pigment print",
+            "dimensions": "100cm x 50 cm",
+            "year": "2025",
+            "price": "",
+            "description": "A magical story of children and a glowing bird during wartime, exploring themes of hope and rescue."
+          }
+        ]
+      },
+      {
+        "key": "marina_rodriguez",
+        "name": "Marina Rodriguez",
+        "bio": "Artist information from Marina Rodriguez",
+        "specialty": "Glazed ceramic with iridescent lusters",
+        "artworks": [
+          {
+            "title": "Damade Night",
+            "image": "images/marina_rodriguez/damade_night.jpg",
+            "medium": "Glazed ceramic with iridescent lusters",
+            "dimensions": "28x10x8cm",
+            "year": "2025",
+            "price": "",
+            "description": "Celebrates the hidden beauty that emerges in darkness and the adaptability of life."
+          },
+          {
+            "title": "Santa Lucia Flower",
+            "image": "images/marina_rodriguez/santa_lucia_flower.jpg",
+            "medium": "Glazed ceramic with iridescent lusters",
+            "dimensions": "20x14x8cm",
+            "year": "2025",
+            "price": "$210 or $310",
+            "description": "Celebrates the fleeting nature of life through vibrant ceramic flowers with blue luster details."
+          }
+        ]
+      }
+    ]
+  }
+}

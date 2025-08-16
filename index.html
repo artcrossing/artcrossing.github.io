@@ -3,204 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Crossing</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'JetBrains Mono', monospace;
-            background: #0a0a0a;
-            min-height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .crossing-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: 1;
-        }
-
-        .horizontal-line {
-            position: absolute;
-            width: 100vw;
-            height: 1px;
-            background: linear-gradient(90deg, transparent 0%, #333 20%, #666 50%, #333 80%, transparent 100%);
-        }
-
-        .vertical-line {
-            position: absolute;
-            width: 1px;
-            height: 100vh;
-            background: linear-gradient(0deg, transparent 0%, #333 20%, #666 50%, #333 80%, transparent 100%);
-        }
-
-        .h-line-1 { top: 20vh; animation: pulse-h 4s ease-in-out infinite; }
-        .h-line-2 { top: 40vh; animation: pulse-h 4s ease-in-out infinite 1s; }
-        .h-line-3 { top: 60vh; animation: pulse-h 4s ease-in-out infinite 2s; }
-        .h-line-4 { top: 80vh; animation: pulse-h 4s ease-in-out infinite 3s; }
-
-        .v-line-1 { left: 15vw; animation: pulse-v 5s ease-in-out infinite; }
-        .v-line-2 { left: 35vw; animation: pulse-v 5s ease-in-out infinite 1.5s; }
-        .v-line-3 { left: 55vw; animation: pulse-v 5s ease-in-out infinite 3s; }
-        .v-line-4 { left: 75vw; animation: pulse-v 5s ease-in-out infinite 4.5s; }
-
-        .diagonal-1 {
-            position: absolute;
-            width: 150%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent 0%, #444 30%, #777 50%, #444 70%, transparent 100%);
-            top: 50%;
-            left: -25%;
-            transform: rotate(30deg);
-            animation: diagonal-pulse 6s ease-in-out infinite;
-        }
-
-        .diagonal-2 {
-            position: absolute;
-            width: 150%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent 0%, #444 30%, #777 50%, #444 70%, transparent 100%);
-            top: 50%;
-            left: -25%;
-            transform: rotate(-30deg);
-            animation: diagonal-pulse 6s ease-in-out infinite 3s;
-        }
-
-        .container {
-            position: relative;
-            z-index: 10;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 8vw, 8rem);
-            font-weight: 100;
-            color: #ffffff;
-            letter-spacing: 0.2em;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            position: relative;
-            text-shadow: 0 0 20px rgba(255,255,255,0.1);
-        }
-
-        h1::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: -100px;
-            width: 80px;
-            height: 1px;
-            background: #666;
-        }
-
-        h1::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -100px;
-            width: 80px;
-            height: 1px;
-            background: #666;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 200;
-            letter-spacing: 0.3em;
-            margin-bottom: 4rem;
-            text-transform: lowercase;
-        }
-
-        .status {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.8rem;
-            color: #555;
-            font-weight: 400;
-            letter-spacing: 0.1em;
-            text-align: center;
-        }
-
-        .status::before {
-            content: '//';
-            color: #333;
-            margin-right: 0.5rem;
-        }
-
-        .blinking-cursor {
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes pulse-h {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.8; }
-        }
-
-        @keyframes pulse-v {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.8; }
-        }
-
-        @keyframes diagonal-pulse {
-            0%, 100% { opacity: 0.2; }
-            50% { opacity: 0.6; }
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        @media (max-width: 768px) {
-            h1::before, h1::after {
-                display: none;
-            }
-        }
-    </style>
+    <title>Sensitive Beings - Art Exhibition</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <div class="crossing-grid">
-        <div class="horizontal-line h-line-1"></div>
-        <div class="horizontal-line h-line-2"></div>
-        <div class="horizontal-line h-line-3"></div>
-        <div class="horizontal-line h-line-4"></div>
-        
-        <div class="vertical-line v-line-1"></div>
-        <div class="vertical-line v-line-2"></div>
-        <div class="vertical-line v-line-3"></div>
-        <div class="vertical-line v-line-4"></div>
-        
-        <div class="diagonal-1"></div>
-        <div class="diagonal-2"></div>
+    <!-- Dynamic Wave Background -->
+    <div class="waves-background">
+        <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg">
+            <!-- Wave paths will be dynamically generated -->
+        </svg>
+        <div class="pointer-dot"></div>
     </div>
 
-    <div class="container">
-        <h1>Art Crossing</h1>
-        <p class="subtitle">digital intersection</p>
-    </div>
+    <!-- Navigation -->
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>Sensitive Beings</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="artworks.html">Artworks</a></li>
+                <li><a href="workshops.html">Workshops</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#visit">Visit</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="status">
-        system initializing<span class="blinking-cursor">_</span>
-        <br>
-        site under development
-    </div>
+    <!-- Hero Section with Shadow Overlay Effect -->
+    <section class="hero-section">
+        <div class="shadow-overlay-container">
+            <div class="shadow-overlay" id="shadowOverlay">
+                <div class="overlay-content">
+                    <h1 class="hero-title">Sensitive Beings</h1>
+                    <p class="hero-tagline">Let echo trace the edge of sense</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-info">
+            <div class="exhibition-dates">
+                <span class="date-highlight">23.8.2025 – 16.9.2025</span>
+                <span class="opening-night">Opening Night: 22.8.2025, 18:00–21:00</span>
+            </div>
+            <div class="location-info">
+                <span class="venue">Kindred Cameras</span>
+                <span class="address">454 Docklands Dr, Docklands VIC 3008</span>
+            </div>
+        </div>
+
+        <!-- Interactive Call-to-Action -->
+        <div class="hero-actions">
+            <a href="artworks.html" class="cta-primary">
+                <span>Explore Artworks</span>
+                <div class="cta-ripple"></div>
+            </a>
+            <a href="workshops.html" class="cta-secondary">
+                <span>View Workshops</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="section-header">
+                    <h2>About the Exhibition</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="about-text">
+                    <blockquote class="main-quote">
+                        "Is the sensitive body a system glitch—or a way of knowing?"
+                    </blockquote>
+                    
+                    <p class="lead-text">"The self is not a unified whole, but a theatre composed of multiple heterotopias."</p>
+                    
+                    <div class="text-columns">
+                        <div class="column">
+                            <p>Each voice, sensation, and memory is a self—an untamed unit of existence. Within this theatre, we open door after door, passing through layers, near-misses, slippages, and echoes, seeking others who resonate with our way of perceiving.</p>
+                        </div>
+                        <div class="column">
+                            <p>Our bodies are no longer just destinations, but thresholds - porous boundaries between the human and the more-than-human. In this exhibition, we invite you to move with smell, listen to stillness, and sit with dampness.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tea Invitation -->
+                <div class="tea-invitation">
+                    <div class="tea-icon">🍵</div>
+                    <p>Choose a cup of tea you like, let its aroma accompany you into the exhibition, gently opening the door to your emotions and starting a journey of perception.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibition Chapters Preview -->
+    <section class="chapters-preview">
+        <div class="container">
+            <h2>Exhibition Chapters</h2>
+            
+            <div class="chapters-grid">
+                <div class="chapter-card" data-chapter="1">
+                    <div class="chapter-number">01</div>
+                    <h3>The Replicated Self</h3>
+                    <p>Selfhood is not self-made, but shaped in subtle repetitions, negotiated glances, and quiet adjustments to what is expected.</p>
+                    <a href="artworks.html#chapter1" class="chapter-link">Explore Chapter →</a>
+                </div>
+                
+                <div class="chapter-card" data-chapter="2">
+                    <div class="chapter-number">02</div>
+                    <h3>The Rewilded Senses</h3>
+                    <p>Even in the default disciplinary reality, feelings still find their way to nurturing the part of us that continues to listen beneath it all.</p>
+                    <a href="artworks.html#chapter2" class="chapter-link">Explore Chapter →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Information -->
+    <section id="visit" class="visit-section">
+        <div class="container">
+            <div class="visit-content">
+                <div class="visit-info">
+                    <h2>Visit Information</h2>
+                    
+                    <div class="info-blocks">
+                        <div class="info-block">
+                            <h3>Opening Hours</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span class="days">Mon / Tue / Thu / Fri</span>
+                                    <span class="time">11:00–18:00</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="days">Sat / Sun</span>
+                                    <span class="time">11:00–16:00</span>
+                                </div>
+                                <div class="hours-item closed">
+                                    <span class="days">Wednesdays</span>
+                                    <span class="time">Closed</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-block">
+                            <h3>Location</h3>
+                            <div class="location-details">
+                                <strong>Kindred Cameras</strong>
+                                <span>454 Docklands Dr</span>
+                                <span>Docklands VIC 3008</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-block">
+                            <h3>Team</h3>
+                            <div class="team-info">
+                                <div class="team-section">
+                                    <strong>Initiator</strong>
+                                    <span>Qiao Zhang</span>
+                                </div>
+                                <div class="team-section">
+                                    <strong>Curator Team</strong>
+                                    <span>Anita Kang, He Siyuan, Jiahui Tang, Lei Wang, Qiao Zhang, Yiwei Chai</span>
+                                </div>
+                                <div class="team-section">
+                                    <strong>Partners</strong>
+                                    <span>Kindred Cameras, The District Docklands</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Sensitive Beings</h3>
+                    <p>23.8.2025 – 16.9.2025</p>
+                </div>
+                <div class="footer-links">
+                    <div class="social-links">
+                        <span>Follow us:</span>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Rednote">Rednote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sensitive Beings Exhibition. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/waves.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

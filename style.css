@@ -1,0 +1,538 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #000000;
+    --color-accent: #E56E4B;
+    --color-background: #ffffff;
+    --color-text: #000000;
+    --color-text-light: #666666;
+    --font-primary: 'Arial', 'Helvetica Neue', sans-serif;
+    --font-serif: 'Times New Roman', Georgia, serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-accent);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.waves-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#wavesCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.hero-tagline {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.hero-details {
+    margin-bottom: 2rem;
+}
+
+.hero-details p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0.3rem;
+}
+
+.dates {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.cta-button {
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.cta-button:hover {
+    background: #d45a3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 110, 75, 0.3);
+}
+
+/* About Section */
+.about-section {
+    padding: 5rem 0;
+    background: var(--color-background);
+}
+
+.about-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-text blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin: 2rem 0;
+    padding-left: 2rem;
+    border-left: 3px solid var(--color-accent);
+}
+
+.exhibition-info {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+
+.exhibition-info h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-item strong {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Artists Section */
+.artists-section {
+    padding: 5rem 0;
+    background: #fafafa;
+}
+
+.artists-section h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.chapter {
+    margin-bottom: 4rem;
+}
+
+.chapter h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.chapter-description {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.artist-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(229, 110, 75, 0.2);
+}
+
+.artist-image {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder-image {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-accent), #d45a3d);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.artist-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.artist-card p {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.artwork-title {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Workshops Section */
+.workshops-section {
+    padding: 5rem 0;
+    background: var(--color-background);
+}
+
+.workshops-section h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.workshops-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.week-block {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-accent);
+}
+
+.week-block h3 {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+.event {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.event:last-child {
+    margin-bottom: 0;
+}
+
+.event .date {
+    font-weight: bold;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.event .title {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.event .description {
+    font-family: var(--font-serif);
+    color: var(--color-text-light);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Visit Section */
+.visit-section {
+    padding: 5rem 0;
+    background: #fafafa;
+}
+
+.visit-section h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.visit-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.location-info h3,
+.tea-invitation h3 {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.location-info p,
+.tea-invitation p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tea-invitation {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tea-invitation p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-light);
+}
+
+/* Footer */
+.footer {
+    background: var(--color-primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-menu {
+        display: none; /* Simple mobile nav - could be improved */
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-details p {
+        font-size: 1rem;
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .visit-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .about-section h2,
+    .artists-section h2,
+    .workshops-section h2,
+    .visit-section h2 {
+        font-size: 2rem;
+    }
+    
+    .chapter h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .about-section,
+    .artists-section,
+    .workshops-section,
+    .visit-section {
+        padding: 3rem 0;
+    }
+    
+    .week-block,
+    .artist-card {
+        padding: 1rem;
+    }
+}
+
+/* Abstract line art background elements */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><path d="M200,50 Q100,100 150,200 T250,300 Q300,350 200,350 Q100,350 150,250 T200,50" stroke="%23E56E4B" stroke-width="2" fill="none" opacity="0.3"/><path d="M100,150 Q200,100 300,150 Q350,200 300,250 Q200,300 100,250 Q50,200 100,150" stroke="%23666" stroke-width="1" fill="none" opacity="0.2"/></svg>') no-repeat center;
+    background-size: contain;
+    z-index: 1;
+    opacity: 0.1;
+}
