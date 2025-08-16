@@ -4,7 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshops - Sensitive Beings</title>
-    <link rel="stylesheet" href="styles/workshops.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #fafafa;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .workshop-navigation {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 10px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-logo h1 {
+            font-size: 1.2rem;
+            color: #E56E4B;
+            margin: 0;
+        }
+
+        .nav-logo a {
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #E56E4B;
+        }
+
+        /* Main content container */
+        .workshop-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px 20px;
+        }
+
+        /* Workshop image styling */
+        .workshop-image {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            max-height: 85vh;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .workshop-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-container {
+                gap: 1rem;
+            }
+
+            .nav-logo h1 {
+                font-size: 1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .nav-menu a {
+                font-size: 0.9rem;
+            }
+
+            .workshop-container {
+                padding: 80px 10px 10px;
+            }
+
+            .workshop-image {
+                max-height: 80vh;
+                border-radius: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .workshop-navigation {
+                top: 10px;
+                padding: 8px 20px;
+            }
+
+            .nav-container {
+                gap: 0.5rem;
+            }
+
+            .nav-logo h1 {
+                font-size: 0.9rem;
+            }
+
+            .nav-menu {
+                gap: 0.8rem;
+            }
+
+            .nav-menu a {
+                font-size: 0.8rem;
+            }
+
+            .workshop-container {
+                padding: 70px 5px 5px;
+            }
+
+            .workshop-image {
+                max-height: 75vh;
+                border-radius: 8px;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .workshop-image {
+                max-height: 90vh;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -25,294 +179,12 @@
         </div>
     </nav>
 
-    <!-- Workshop Header -->
-    <section class="workshop-header">
-        <div class="container">
-            <h1 class="workshop-title">Exhibition Workshops</h1>
-            <p class="workshop-subtitle">Immersive experiences and creative journeys</p>
-        </div>
-    </section>
-
-    <!-- Workshop Timeline Carousel -->
-    <section class="workshop-carousel">
-        <div class="timeline-container">
-            <div class="timeline-track" id="workshopTrack">
-                
-                <!-- Week 1 -->
-                <div class="workshop-slide" data-week="1">
-                    <div class="week-card">
-                        <div class="week-header">
-                            <span class="week-number">01</span>
-                            <h3>Week 1</h3>
-                        </div>
-                        <div class="workshop-content">
-                            <div class="workshop-event featured">
-                                <div class="event-time">
-                                    <span class="date">22/08/2025</span>
-                                    <span class="time">18:00–21:00</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Exhibition Opening Night</h4>
-                                    <p class="event-description">Join us for the grand opening of Sensitive Beings, featuring artist talks, refreshments, and the first glimpse of all artworks.</p>
-                                    <div class="event-tags">
-                                        <span class="tag special">Special Event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Week 2 -->
-                <div class="workshop-slide" data-week="2">
-                    <div class="week-card">
-                        <div class="week-header">
-                            <span class="week-number">02</span>
-                            <h3>Week 2</h3>
-                        </div>
-                        <div class="workshop-content">
-                            <div class="workshop-event">
-                                <div class="event-time">
-                                    <span class="date">30/08/2025</span>
-                                    <span class="time">17:30–19:30</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Emotion-Inspired Painting Workshop</h4>
-                                    <p class="event-subtitle">"Inner Atlas – Mapping My Emotions"</p>
-                                    <p class="event-description">Explore your emotional landscape through guided painting exercises using color, texture, and form to express inner feelings.</p>
-                                    <div class="event-tags">
-                                        <span class="tag art">Art Creation</span>
-                                        <span class="tag workshop">Workshop</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="workshop-event">
-                                <div class="event-time">
-                                    <span class="date">31/08/2025</span>
-                                    <span class="time">17:45–18:45</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Chinese Scent Studio</h4>
-                                    <p class="event-subtitle">"The Scent Within – A Journey of Sensing"</p>
-                                    <p class="event-description">A sensory journey exploring memory and emotion through traditional Chinese aromatics and mindful breathing.</p>
-                                    <div class="event-tags">
-                                        <span class="tag sensory">Sensory</span>
-                                        <span class="tag mandarin">Mandarin Only</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Week 3 -->
-                <div class="workshop-slide" data-week="3">
-                    <div class="week-card">
-                        <div class="week-header">
-                            <span class="week-number">03</span>
-                            <h3>Week 3</h3>
-                        </div>
-                        <div class="workshop-content">
-                            <div class="workshop-event">
-                                <div class="event-time">
-                                    <span class="date">06/09/2025</span>
-                                    <span class="time">17:30–19:30</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Artist Sculpture Workshop</h4>
-                                    <p class="event-subtitle">"Contours of Me – A Portrait in Wire and Shrink"</p>
-                                    <p class="event-description">Create three-dimensional self-portraits using wire manipulation and heat-shrink techniques to explore identity and form.</p>
-                                    <div class="event-tags">
-                                        <span class="tag sculpture">Sculpture</span>
-                                        <span class="tag hands-on">Hands-on</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="workshop-event">
-                                <div class="event-time">
-                                    <span class="date">07/09/2025</span>
-                                    <span class="time">17:45–18:45</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Chinese Scent Studio</h4>
-                                    <p class="event-subtitle">"The Scent Within – A Journey of Sensing"</p>
-                                    <p class="event-description">Experience the same sensory journey, now conducted in English for broader accessibility.</p>
-                                    <div class="event-tags">
-                                        <span class="tag sensory">Sensory</span>
-                                        <span class="tag english">English</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Week 4 -->
-                <div class="workshop-slide" data-week="4">
-                    <div class="week-card">
-                        <div class="week-header">
-                            <span class="week-number">04</span>
-                            <h3>Week 4</h3>
-                        </div>
-                        <div class="workshop-content">
-                            <div class="workshop-event">
-                                <div class="event-time">
-                                    <span class="date">09/09/2025</span>
-                                    <span class="time">18:30–20:00</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Rice Painting with Vivian</h4>
-                                    <p class="event-description">Learn traditional techniques of using rice as both medium and canvas, exploring cultural heritage through contemporary art practice.</p>
-                                    <div class="event-tags">
-                                        <span class="tag traditional">Traditional</span>
-                                        <span class="tag cultural">Cultural</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="workshop-event">
-                                <div class="event-time">
-                                    <span class="date">13/09/2025</span>
-                                    <span class="time">17:30–19:30</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Rice Clay Sculpture Making with Vivian</h4>
-                                    <p class="event-description">Build sculptural forms using rice-based clay, connecting with ancestral techniques while creating contemporary expressions.</p>
-                                    <div class="event-tags">
-                                        <span class="tag sculpture">Sculpture</span>
-                                        <span class="tag heritage">Heritage</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="workshop-event">
-                                <div class="event-time">
-                                    <span class="date">14/09/2025</span>
-                                    <span class="time">17:30–19:30</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Emotion-Inspired Painting Workshop</h4>
-                                    <p class="event-subtitle">"Inner Atlas – Mapping My Emotions"</p>
-                                    <p class="event-description">A second opportunity to explore emotional mapping through painting for those who missed the first session.</p>
-                                    <div class="event-tags">
-                                        <span class="tag art">Art Creation</span>
-                                        <span class="tag repeat">Repeat Session</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Week 5 -->
-                <div class="workshop-slide" data-week="5">
-                    <div class="week-card">
-                        <div class="week-header">
-                            <span class="week-number">05</span>
-                            <h3>Week 5</h3>
-                        </div>
-                        <div class="workshop-content">
-                            <div class="workshop-event featured closing">
-                                <div class="event-time">
-                                    <span class="date">16/09/2025</span>
-                                    <span class="time">18:30–20:30</span>
-                                </div>
-                                <div class="event-info">
-                                    <h4>Beyond Identity® "The Void"</h4>
-                                    <p class="event-subtitle">Closing Night Performance</p>
-                                    <p class="event-description">An immersive interactive contemporary dance experience that explores the spaces between identity and void, featuring live performance art.</p>
-                                    <div class="event-tags">
-                                        <span class="tag performance">Performance</span>
-                                        <span class="tag interactive">Interactive</span>
-                                        <span class="tag closing">Closing Event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Timeline Navigation -->
-            <div class="timeline-controls">
-                <button class="timeline-btn prev" id="timelinePrev">‹</button>
-                <div class="week-indicators" id="weekIndicators"></div>
-                <button class="timeline-btn next" id="timelineNext">›</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Workshop Information -->
-    <section class="workshop-info">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-card">
-                    <div class="info-icon">🎨</div>
-                    <h3>Art Workshops</h3>
-                    <p>Hands-on creative sessions led by exhibiting artists, exploring various mediums and techniques from traditional to contemporary approaches.</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">🌸</div>
-                    <h3>Sensory Experiences</h3>
-                    <p>Immersive workshops that engage all five senses, including scent studios and tactile experiences that deepen perception.</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">🎭</div>
-                    <h3>Performance Art</h3>
-                    <p>Live interactive performances that blur the boundaries between artist and audience, creating shared experiential moments.</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">🧘</div>
-                    <h3>Mindful Practices</h3>
-                    <p>Contemplative workshops that combine art-making with mindfulness, exploring the intersection of creativity and consciousness.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section class="workshop-registration">
-        <div class="container">
-            <h2>Join the Workshop Experience</h2>
-            <p>All workshops are included with exhibition entry. Some workshops have limited capacity and require advance booking.</p>
-            
-            <div class="registration-info">
-                <div class="booking-details">
-                    <h3>How to Book</h3>
-                    <ul>
-                        <li>Visit the exhibition during opening hours</li>
-                        <li>Register at the front desk</li>
-                        <li>Some workshops accept walk-ins subject to availability</li>
-                        <li>Performance events have reserved seating</li>
-                    </ul>
-                </div>
-                <div class="contact-info">
-                    <h3>Questions?</h3>
-                    <p>Contact Kindred Cameras for workshop inquiries and bookings.</p>
-                    <div class="contact-details">
-                        <p><strong>Location:</strong> 454 Docklands Dr, Docklands VIC 3008</p>
-                        <p><strong>Exhibition Hours:</strong> See visit information</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="workshop-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-nav">
-                    <a href="index.html">Home</a>
-                    <a href="artworks.html">Artworks</a>
-                    <a href="index.html#visit">Visit</a>
-                </div>
-                <div class="footer-info">
-                    <p>Sensitive Beings Exhibition</p>
-                    <p>23.8.2025 – 16.9.2025</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="scripts/workshop-carousel.js"></script>
+    <!-- Workshop Image Container -->
+    <main class="workshop-container">
+        <img src="workshop/23071754899970_.pic.jpg" 
+             alt="Exhibition Workshops List" 
+             class="workshop-image"
+             loading="lazy">
+    </main>
 </body>
 </html>

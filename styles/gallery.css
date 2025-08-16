@@ -375,20 +375,21 @@ body {
     font-size: 1.3rem;
     color: var(--color-accent);
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-family: var(--font-serif);
     font-style: italic;
 }
 
 .artwork-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-    margin: 1rem 0;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
     background: rgba(229, 110, 75, 0.05);
     border-radius: 8px;
     border-left: 3px solid var(--color-accent);
+    text-align: center;
 }
 
 .artwork-medium,
@@ -396,7 +397,8 @@ body {
 .artwork-year {
     font-size: 0.9rem;
     color: var(--color-text);
-    line-height: 1.4;
+    line-height: 1.2;
+    margin: 0;
 }
 
 .artwork-medium strong,
@@ -412,8 +414,8 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--color-accent);
-    margin-top: 1rem;
-    padding: 0.8rem 1rem;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
     background: linear-gradient(135deg, rgba(229, 110, 75, 0.1), rgba(229, 110, 75, 0.05));
     border-radius: 8px;
     text-align: center;
