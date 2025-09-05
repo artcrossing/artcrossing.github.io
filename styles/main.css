@@ -414,91 +414,94 @@ body {
     line-height: 1.6;
 }
 
-/* Chapters Preview */
-.chapters-preview {
+/* Exhibition Chapters */
+.exhibition-chapters {
     padding: 6rem 0;
     background: rgba(249, 249, 249, 0.8);
 }
 
-.chapters-preview h2 {
+.exhibition-chapters h2 {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 4rem;
     color: var(--color-primary);
 }
 
-.chapters-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    max-width: 1000px;
+.chapter-content {
+    max-width: 800px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
-.chapter-card {
-    background: white;
-    border-radius: 20px;
-    padding: 3rem 2.5rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.chapter-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--color-accent);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.chapter-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-}
-
-.chapter-card:hover::before {
-    transform: scaleX(1);
-}
-
-.chapter-number {
-    font-size: 4rem;
-    font-weight: 800;
-    color: rgba(229, 110, 75, 0.2);
-    margin-bottom: 1rem;
-    line-height: 1;
-}
-
-.chapter-card h3 {
-    font-size: 1.8rem;
+.chapter-content h3 {
+    font-size: 2.2rem;
     color: var(--color-primary);
-    margin-bottom: 1rem;
+    margin: 4rem 0 1rem 0;
     font-weight: 700;
+    text-align: center;
 }
 
-.chapter-card p {
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-.chapter-link {
+.chapter-content h4 {
+    font-size: 1.5rem;
     color: var(--color-accent);
-    text-decoration: none;
+    margin: 2.5rem 0 1rem 0;
     font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    position: relative;
 }
 
-.chapter-link:hover {
-    color: var(--color-primary);
-    transform: translateX(5px);
+.chapter-content p {
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.artwork-medium {
+    color: var(--color-text-light);
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.artist-role {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.chapter-image,
+.artist-image,
+.artwork-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.chapter-image {
+    max-width: 700px;
+    margin: 2rem auto 3rem auto;
+}
+
+.artist-image {
+    max-width: 400px;
+    border-radius: 50%;
+    margin: 2.5rem auto 1.5rem auto;
+}
+
+.artwork-image {
+    max-width: 500px;
+}
+
+.chapter-image:hover,
+.artist-image:hover,
+.artwork-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Visit Section */
@@ -637,8 +640,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .chapters-grid {
-        grid-template-columns: 1fr;
+    .chapter-content {
+        max-width: 700px;
+        padding: 0 20px;
     }
     
     .hero-info {
@@ -693,9 +697,32 @@ body {
         font-size: 2.5rem;
     }
     
-    .chapters-preview h2,
+    .exhibition-chapters h2,
     .visit-info h2 {
         font-size: 2.5rem;
+    }
+    
+    .chapter-content {
+        padding: 0 15px;
+    }
+    
+    .chapter-content h3 {
+        font-size: 1.8rem;
+        margin: 3rem 0 1rem 0;
+    }
+    
+    .chapter-content h4 {
+        font-size: 1.3rem;
+    }
+    
+    .chapter-image,
+    .artist-image,
+    .artwork-image {
+        margin: 1.5rem auto;
+    }
+    
+    .artist-image {
+        max-width: 300px;
     }
     
     .footer-content {
@@ -732,8 +759,33 @@ body {
         padding: 1rem 1.5rem;
     }
     
-    .chapter-card {
-        padding: 2rem 1.5rem;
+    .chapter-content {
+        padding: 0 10px;
+    }
+    
+    .chapter-content h3 {
+        font-size: 1.6rem;
+        margin: 2.5rem 0 1rem 0;
+    }
+    
+    .chapter-content h4 {
+        font-size: 1.2rem;
+        margin: 2rem 0 0.8rem 0;
+    }
+    
+    .chapter-content p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .chapter-image,
+    .artist-image,
+    .artwork-image {
+        margin: 1.2rem auto;
+    }
+    
+    .artist-image {
+        max-width: 250px;
     }
     
     .info-block {
