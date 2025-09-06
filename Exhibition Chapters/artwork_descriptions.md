@@ -489,6 +489,8 @@ flower.png
 
 glazed ceramic  with iridescent  lusters
 20cm x 14 x 8cm
+
+
 2025 
 
 St. Lucy's Flower (Commelina erecta): With its vibrant blue petals, enhanced with blue luster details, mother-of-pearl patterns, and golden pistils, the St. Lucy's Flower teaches us about the fleeting nature of life. This tiny flower, which lives only a couple of hours and blooms very close to the ground, invites us to appreciate the beauty in the ephemeral and to carefully observe the most modest details of our natural environment
