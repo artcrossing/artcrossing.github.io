@@ -657,12 +657,39 @@ body {
 }
 
 @media (max-width: 768px) {
+    .main-navigation {
+        top: 15px;
+        right: 20px;
+        left: auto;
+        transform: none;
+    }
+    
     .nav-container {
-        padding: 0 15px;
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        gap: 0;
+        min-height: 36px;
+        max-width: 120px;
+    }
+    
+    .nav-logo {
+        padding: 0;
+    }
+    
+    .nav-logo h1 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        letter-spacing: -0.01em;
     }
     
     .nav-menu {
-        display: none; /* Simplified - could add mobile menu */
+        display: none;
     }
     
     .shadow-overlay {
@@ -733,6 +760,24 @@ body {
 }
 
 @media (max-width: 480px) {
+    .main-navigation {
+        top: 12px;
+        right: 15px;
+    }
+    
+    .nav-container {
+        padding: 4px 10px;
+        border-radius: 18px;
+        min-height: 32px;
+        max-width: 100px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    }
+    
+    .nav-logo h1 {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
     .container {
         padding: 0 15px;
     }
